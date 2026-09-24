@@ -1,0 +1,22 @@
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "NotCoin — цифровые подарки",
+  description: "Маркетплейс цифровых подарков NotCoin в Telegram",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#0b0d12",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="ru" className="h-full antialiased">
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
+}
